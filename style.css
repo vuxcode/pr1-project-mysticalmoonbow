@@ -6,7 +6,6 @@ body {
 button {
     background: white;
     border-width: 1px;
-    color: black;
     font-size: 30px;
     height: 60px;
     padding: 0px;
@@ -22,6 +21,33 @@ button {
 .boardRow {
     display: flex;
 }
+.box {
+    border-width: 2px;
+}
 .row {
     display: flex;
+}
+#boxOne {
+    border-style: none solid solid none;
+}
+#boxTwo {
+    border-style: none none solid none;
+}
+#boxThree {
+    border-style: none none solid solid;
+}
+#boxFour {
+    border-style: none solid none none;
+}
+#boxSix {
+    border-style: none none none solid;
+}
+#boxSeven {
+    border-style: solid solid none none;
+}
+#boxEight {
+    border-style: solid none none none;
+}
+#boxNine {
+    border-style: solid none none solid;
 }
