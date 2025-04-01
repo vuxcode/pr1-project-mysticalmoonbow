@@ -1,10 +1,11 @@
 body {
     background: #282828;
     display: flex;
-
 }
-button {
+button.square {
     background: white;
+    border-color: black;
+    border-style: solid;
     border-width: 1px;
     font-size: 30px;
     height: 60px;
@@ -14,15 +15,22 @@ button {
 .board {
     border-color: black;
     border-style: solid;
-    border-width: 4px;
-    /* centers the board on the screen */
-    margin: auto;
+    border-width: 2px;
+    margin: auto; /* centers the board on the screen */
 }
 .boardRow {
     display: flex;
 }
 .box {
     border-width: 2px;
+}
+.buttonFlex:active {
+    background: #eaeaea;
+    border-style: outset;
+    border-width: 2px;
+}
+.buttonFlex:hover {
+    background: #e1e1e1;
 }
 .row {
     display: flex;
