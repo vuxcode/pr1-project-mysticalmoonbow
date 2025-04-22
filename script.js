@@ -6,17 +6,26 @@ var answers = [
 ];
 
 // Connect the buttons to different variables
-a1 = document.getElementById("a1");
-a2 = document.getElementById("a2");
-a3 = document.getElementById("a3");
-a4 = document.getElementById("a4");
+var a1 = document.getElementById("a1");
+var a2 = document.getElementById("a2");
+var a3 = document.getElementById("a3");
+var a4 = document.getElementById("a4");
 
 var userAnswers = [
+  "", // Answer 1 / Index 0
+  "", // Answer 2 / Index 1
+  "", // Answer 3 / Index 2
+  "" // Answer 4 / Index 3
+];
+
+var refArray = [
   a1, // Answer 1 / Index 0
   a2, // Answer 2 / Index 1
   a3, // Answer 3 / Index 2
   a4 // Answer 4 / Index 3
 ];
+
+var index = refArray.indexOf("a1");
 
 // Add an event listener to each button
 a1.addEventListener("click", getID);
@@ -28,5 +37,5 @@ a4.addEventListener("click", getID);
 function getID() {
   userAnswers = prompt();
   // Updates the number box with the user's input
-  document.getElementById(this.id).innerText = userAnswers;
+  document.getElementById(this.id).innerText = userAnswers[index];
 }
