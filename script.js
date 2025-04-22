@@ -41,13 +41,15 @@ a4.addEventListener("click", getID);
 // This function will run every time a button is clicked
 function getID() {
   // Update the currentID variable with the id of the button that's been clicked
-  currentID = document.getElementById(this.id);
+  currentID = document.getElementById(this.id).id;
   // Update the currentAnswer variable with the user's latest answer
   currentAnswer = prompt();
+  console.log(currentID);
   // Update currentIndex with the current id
-  currentIndex = array.indexOf(currentID);
+  // currentIndex = array.indexOf(currentID);
   // Store the user's answer in the userAnswers array
-  userAnswers[currentIndex] = currentAnswer
+  userAnswers[currentID] = currentAnswer
+  console.log(userAnswers);
   // Updates the number box with the user's input
   document.getElementById(this.id).innerText = currentAnswer;
 }
