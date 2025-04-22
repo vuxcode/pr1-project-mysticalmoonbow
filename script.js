@@ -1,31 +1,36 @@
+var refArray = [
+  "a1", // a1 / Index 0
+  "a2", // a2 / Index 1
+  "a3", // a3 / Index 2
+  "a4" // a4 / Index 3
+];
+
 var answers = [
-  3, // Answer 1 / Index 0
-  9, // Answer 2 / Index 1
-  1, // Answer 3 / Index 2
-  4 // Answer 4 / Index 3
+  3, // a1 / Index 0
+  9, // a2 / Index 1
+  1, // a3 / Index 2
+  4 // a4 / Index 3
 ];
 
 // Connect the buttons to different variables
-var a1 = document.getElementById("a1");
-var a2 = document.getElementById("a2");
-var a3 = document.getElementById("a3");
-var a4 = document.getElementById("a4");
+var a1 = document.getElementById("0");
+var a2 = document.getElementById("1");
+var a3 = document.getElementById("2");
+var a4 = document.getElementById("3");
 
 var userAnswers = [
-  "", // Answer 1 / Index 0
-  "", // Answer 2 / Index 1
-  "", // Answer 3 / Index 2
-  "" // Answer 4 / Index 3
+  "", // a1 / Index 0
+  "", // a2 / Index 1
+  "", // a3 / Index 2
+  "" // a4 / Index 3
 ];
 
-var refArray = [
-  a1, // Answer 1 / Index 0
-  a2, // Answer 2 / Index 1
-  a3, // Answer 3 / Index 2
-  a4 // Answer 4 / Index 3
-];
-
-var index = refArray.indexOf("a1");
+// Create a variable for the current id
+var currentID = "";
+// Create a variable for the current answer
+var currentAnswer = "";
+// Create a variable for the current index
+var currentIndex = userAnswers.indexOf("");
 
 // Add an event listener to each button
 a1.addEventListener("click", getID);
@@ -35,7 +40,14 @@ a4.addEventListener("click", getID);
 
 // This function will run every time a button is clicked
 function getID() {
-  userAnswers = prompt();
+  // Update the currentID variable with the id of the button that's been clicked
+  currentID = document.getElementById(this.id);
+  // Update the currentAnswer variable with the user's latest answer
+  currentAnswer = prompt();
+  // Update currentIndex with the current id
+  currentIndex = array.indexOf(currentID);
+  // Store the user's answer in the userAnswers array
+  userAnswers[currentIndex] = currentAnswer
   // Updates the number box with the user's input
-  document.getElementById(this.id).innerText = userAnswers[index];
+  document.getElementById(this.id).innerText = currentAnswer;
 }
