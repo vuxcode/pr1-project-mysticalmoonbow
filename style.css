@@ -35,27 +35,27 @@ button.square {
 .row {
     display: flex;
 }
-#boxOne {
+#boxA {
     border-style: none solid solid none;
 }
-#boxTwo {
+#boxB {
     border-style: none none solid none;
 }
-#boxThree {
+#boxC {
     border-style: none none solid solid;
 }
-#boxFour {
+#boxD {
     border-style: none solid none none;
 }
-#boxSix {
+#boxF {
     border-style: none none none solid;
 }
-#boxSeven {
+#boxG {
     border-style: solid solid none none;
 }
-#boxEight {
+#boxH {
     border-style: solid none none none;
 }
-#boxNine {
+#boxI {
     border-style: solid none none solid;
 }
