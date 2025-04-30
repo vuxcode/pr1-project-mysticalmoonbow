@@ -1,5 +1,11 @@
 body {
     background: #282828;
+    color: white;
+}
+h1 {
+    color: #a8f420;
+}
+body.sudoku {
     display: flex;
 }
 button.square {
