@@ -1,15 +1,24 @@
 body {
+    align-items: center;
     background: #282828;
     color: white;
+    display: flex;
+    flex-direction: column;
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
+    /* background-image: url("background.jpg"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 h1 {
     color: #a8f420;
 }
 header {
-    background: black;
-    padding: 20px;
+    background: #373540;
+    padding: 10px 20px;
+    width: 100%;
 }
 body.sudoku {
     display: flex;
@@ -24,21 +33,42 @@ button.square {
     padding: 0px;
     width: 60px;
 }
+img {
+    border-radius: 50px;
+    width: 60px;
+}
 main {
+    align-items: center;
     background-color: #4D4B57;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     max-width: 1080px;
+    padding: 20px;
 }
 nav {
-    font-size: 20px;
+    justify-content: space-between;
+    display: flex;
+    margin: 0px 20px;
+}
+a.links {
+    background: #4D4B57;
+    font-size: 18px;
+    margin-left: 20px;
 }
 /* HERO SECTION */
 div.hero {
     /* to see the space the div takes up */
     border: #282828 dashed 2px;
     border-radius: 20px;
+}
+div.links {
+    display: flex;
+    align-items: center;
+}
+div.logo {
+    display: flex;
+    align-items: center;
 }
 h1.hero {
     font-size: 50px;
@@ -87,7 +117,6 @@ a:active {
     padding: 10px 20px 20px 20px;
 }
 .links {
-    background-color: #4D4B57;
     border-radius: 20px;
     padding: 10px 20px;
 }
