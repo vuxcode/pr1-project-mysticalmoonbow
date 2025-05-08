@@ -24,13 +24,21 @@ button.square {
     padding: 0px;
     width: 60px;
 }
+main {
+    background-color: #4D4B57;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+}
 nav {
     font-size: 20px;
 }
 /* HERO SECTION */
 div.hero {
     /* to see the space the div takes up */
-    border: white solid 2px;
+    border: #282828 dashed 2px;
+    border-radius: 20px;
 }
 h1.hero {
     font-size: 50px;
@@ -59,6 +67,7 @@ a:active {
     display: flex;
 }
 .box {
+    color: black;
     border-width: 2px;
 }
 .buttonFlex:active {
@@ -70,7 +79,17 @@ a:active {
     background: #e1e1e1;
 }
 .card {
-    padding: 20px;
+    background: #373540;
+    border-color: #282828;
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 2px;
+    padding: 10px 20px 20px 20px;
+}
+.links {
+    background-color: #4D4B57;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 .row {
     display: flex;
