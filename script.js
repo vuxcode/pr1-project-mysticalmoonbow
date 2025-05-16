@@ -180,30 +180,38 @@ function getID() {
   currentID = document.getElementById(this.id).id;
   // Update the currentAnswer variable with the user's latest answer
   currentAnswer = prompt();
-  console.log(currentID);
   // Store the user's answer in the userAnswer array
   userAnswer[currentID] = currentAnswer
-  console.log(userAnswer);
-  // Updates the number box with the user's input
+  // Remove the "right"/"wrong" class from the button if there is one
+  document.getElementById(this.id).classList.remove("right");
+  document.getElementById(this.id).classList.remove("wrong");
+  // Update the number box with the user's input
   document.getElementById(this.id).innerText = currentAnswer;
 }
   
-// Create a function that will run each time the validate button is clicked
+// Create a function that will run every time the validate button is clicked
 function checkAnswer() {
   console.log("The validate button has been clicked");
   for (var i = 0; i < correctAnswer.length; i++) {
-    // COLIN: TAKE AWAY THE "RIGHT" AND "WRONG" CLASS FROM THIS BUTTON
     // Check if the user's answer is correct
     if (userAnswer[i] == correctAnswer[i]) {
+    // The user's answer is shown in the console log
     console.log(correctAnswer[i]);
-
-    var arrayIndex = correctAnswer.indexOf([i]);
-
-    document.getElementById(arrayIndex).classList.add("right");
+    // The box will turn green if the user's answer is right
+    // The green background will only disappear if the input is updated
+    document.getElementById(i).classList.add("right");
     }
+    // Nothing happens if the user has entered an empty string
+    else if (userAnswer[i] == "") {
+
+    }
+    // Nothing happens if the user has pressed "cancel"
+    else if (userAnswer[i] == null) {
+
+    }
+    // The box will turn red if the user's answer is wrong
     else {
-    // COLIN: ADD THE "WRONG" CLASS HERE!
-    document.getElementById(this.id).classList.add("wrong");
+    document.getElementById(i).classList.add("wrong");
     }
   }
 }
