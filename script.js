@@ -179,14 +179,32 @@ function getID() {
   // Update the currentID variable with the id of the button that's been clicked
   currentID = document.getElementById(this.id).id;
   // Update the currentAnswer variable with the user's latest answer
-  currentAnswer = prompt();
-  // Store the user's answer in the userAnswer array
-  userAnswer[currentID] = currentAnswer
-  // Remove the "right"/"wrong" class from the button if there is one
-  document.getElementById(this.id).classList.remove("right");
-  document.getElementById(this.id).classList.remove("wrong");
-  // Update the number box with the user's input
-  document.getElementById(this.id).innerText = currentAnswer;
+  currentAnswer = prompt("Input a number here");
+  // Check if the input is an empty string
+  if (currentAnswer == "") {
+    console.log("The user hasn't entered any text");
+    // Store the user's answer in the userAnswer array
+    userAnswer[currentID] = currentAnswer
+    // Update the number box with the user's input
+    document.getElementById(this.id).innerText = currentAnswer;
+    // Remove the "right"/"wrong" class from the button if there is one
+    document.getElementById(this.id).classList.remove("right");
+    document.getElementById(this.id).classList.remove("wrong");
+  }
+  // Check if the input equals null
+  else if (currentAnswer == null) {
+    console.log("The user has pressed the cancel button");
+  }
+  // If the user has entered anything else and pressed "ok" the button will be updated with the user's answer
+  else {
+    // Store the user's answer in the userAnswer array
+    userAnswer[currentID] = currentAnswer
+    // Update the number box with the user's input
+    document.getElementById(this.id).innerText = currentAnswer;
+    // Remove the "right"/"wrong" class from the button if there is one
+    document.getElementById(this.id).classList.remove("right");
+    document.getElementById(this.id).classList.remove("wrong");
+  }
 }
   
 // Create a function that will run every time the validate button is clicked
