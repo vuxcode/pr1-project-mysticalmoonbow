@@ -41,44 +41,46 @@ var correctAnswer = [
 ];
 
 // Create a variable for every available button and connect them using getElementById
-var a1 = document.getElementById("0");
-var a2 = document.getElementById("1");
-var a3 = document.getElementById("2");
-var a4 = document.getElementById("3");
-var b1 = document.getElementById("4");
-var b2 = document.getElementById("5");
-var b3 = document.getElementById("6");
-var b4 = document.getElementById("7");
-var c1 = document.getElementById("8");
-var c2 = document.getElementById("9");
-var c3 = document.getElementById("10");
-var d1 = document.getElementById("11");
-var d2 = document.getElementById("12");
-var d3 = document.getElementById("13");
-var d4 = document.getElementById("14");
-var d5 = document.getElementById("15");
-var e1 = document.getElementById("16");
-var f1 = document.getElementById("17");
-var f2 = document.getElementById("18");
-var f3 = document.getElementById("19");
-var f4 = document.getElementById("20");
-var f5 = document.getElementById("21");
-var g1 = document.getElementById("22");
-var g2 = document.getElementById("23");
-var g3 = document.getElementById("24");
-var g4 = document.getElementById("25");
-var g5 = document.getElementById("26");
-var h1 = document.getElementById("27");
-var h2 = document.getElementById("28");
-var h3 = document.getElementById("29");
-var h4 = document.getElementById("30");
-var h5 = document.getElementById("31");
-var h6 = document.getElementById("32");
-var h7 = document.getElementById("33");
-var i1 = document.getElementById("34");
-var i2 = document.getElementById("35");
-var i3 = document.getElementById("36");
-var i4 = document.getElementById("37");
+var buttons = [
+  a1 = document.getElementById("0"), // Index 0
+  a2 = document.getElementById("1"),
+  a3 = document.getElementById("2"),
+  a4 = document.getElementById("3"),
+  b1 = document.getElementById("4"),
+  b2 = document.getElementById("5"),
+  b3 = document.getElementById("6"),
+  b4 = document.getElementById("7"),
+  c1 = document.getElementById("8"),
+  c2 = document.getElementById("9"),
+  c3 = document.getElementById("10"),
+  d1 = document.getElementById("11"),
+  d2 = document.getElementById("12"),
+  d3 = document.getElementById("13"),
+  d4 = document.getElementById("14"),
+  d5 = document.getElementById("15"),
+  e1 = document.getElementById("16"),
+  f1 = document.getElementById("17"),
+  f2 = document.getElementById("18"),
+  f3 = document.getElementById("19"),
+  f4 = document.getElementById("20"),
+  f5 = document.getElementById("21"),
+  g1 = document.getElementById("22"),
+  g2 = document.getElementById("23"),
+  g3 = document.getElementById("24"),
+  g4 = document.getElementById("25"),
+  g5 = document.getElementById("26"),
+  h1 = document.getElementById("27"),
+  h2 = document.getElementById("28"),
+  h3 = document.getElementById("29"),
+  h4 = document.getElementById("30"),
+  h5 = document.getElementById("31"),
+  h6 = document.getElementById("32"),
+  h7 = document.getElementById("33"),
+  i1 = document.getElementById("34"),
+  i2 = document.getElementById("35"),
+  i3 = document.getElementById("36"),
+  i4 = document.getElementById("37")
+];
 
 // Create a variable for the validate button
 var validate = document.getElementById("validate");
@@ -187,8 +189,7 @@ function getID() {
     userAnswer[currentID] = currentAnswer
     // Update the number box with the user's input
     document.getElementById(this.id).innerText = currentAnswer;
-    // Remove the "right"/"wrong" class from the button if there is one
-    document.getElementById(this.id).classList.remove("right");
+    // Remove the "wrong" class from the button if there is one
     document.getElementById(this.id).classList.remove("wrong");
   }
   // Check if the input equals null
@@ -201,8 +202,7 @@ function getID() {
     userAnswer[currentID] = currentAnswer
     // Update the number box with the user's input
     document.getElementById(this.id).innerText = currentAnswer;
-    // Remove the "right"/"wrong" class from the button if there is one
-    document.getElementById(this.id).classList.remove("right");
+    // Remove the "wrong" class from the button if there is one
     document.getElementById(this.id).classList.remove("wrong");
   }
 }
@@ -216,8 +216,13 @@ function checkAnswer() {
     // The user's answer is shown in the console log
     console.log(correctAnswer[i]);
     // The box will turn green if the user's answer is right
-    // The green background will only disappear if the input is updated
     document.getElementById(i).classList.add("right");
+    // Remove the "buttonFlex" class from the button
+    document.getElementById(i).classList.remove("buttonFlex");
+    // Add a "buttonFixed" class to the button
+    document.getElementById(i).classList.add("buttonFixed");
+    // Remove the event listener from the button
+    buttons[i].removeEventListener("click", getID);
     }
     // Nothing happens if the user has entered an empty string
     else if (userAnswer[i] == "") {
