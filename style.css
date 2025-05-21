@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    align-items: center;
     background: #232323;
     color: white;
     display: flex;
@@ -25,7 +24,7 @@ h2 {
     margin: 16px 0px;
 }
 header {
-    padding: 10px 20px;
+    padding: 20px 0px;
     width: 100%;
 }
 img {
@@ -33,23 +32,23 @@ img {
     width: 60px;
 }
 main {
-    background-color: #4D4B57;
+    background-color: #232323;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    width: 100%;
+    padding: 10px 0px;
 }
 nav {
     justify-content: space-between;
     display: flex;
-    margin: 0px 20px;
+    margin: 0px 30px;
 }
 a.links {
-    background: #4D4B57;
+    background: #232323;
     font-size: 18px;
     margin-left: 20px;
 }
 body.sudoku {
+    align-items: center;
     display: flex;
 }
 button.square {
@@ -63,11 +62,6 @@ button.square {
     padding: 0px;
     width: 60px;
 }
-div.hero {
-    /* to see the space the div takes up */
-    border: #282828 dashed 2px;
-    border-radius: 20px;
-}
 div.links {
     display: flex;
     align-items: center;
@@ -80,11 +74,31 @@ div.two-part {
     display: flex;
     margin: 0px 10px;
 }
+section.about {
+    align-items: center;
+    background: #232323;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+section.hero {
+    height: 400px;
+    text-align: center;
+    /* not needed? */
+    /* width: 100%; */
+}
+h1.about {
+    font-size: 32px;
+}
 h1.hero {
-    font-size: 50px;
-    margin: 0;
+    font-size: 80px;
+}
+p.about {
+    margin: 16px 20px;
+    max-width: 600px;
 }
 p.hero {
+    height: 200px;
     margin: 0;
 }
 button#validate {
@@ -123,8 +137,6 @@ a:active {
     background: #e1e1e1;
 }
 .card {
-    background: #373540;
-    border-color: #282828;
     border-radius: 20px;
     border-style: dashed;
     border-width: 2px;
@@ -177,4 +189,7 @@ button.square.right {
 }
 button.square.wrong {
     background: #ff9696;
+}
+.square.wrong:hover {
+    background: #e1e1e1;
 }
