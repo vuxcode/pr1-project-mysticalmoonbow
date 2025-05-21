@@ -24,7 +24,8 @@ h2 {
     margin: 16px 0px;
 }
 header {
-    padding: 20px 0px;
+    background: #232323;
+    padding: 10px 0px;
     width: 100%;
 }
 img {
@@ -72,33 +73,38 @@ div.logo {
 }
 div.two-part {
     display: flex;
-    margin: 0px 10px;
+    margin: 0px 20px;
 }
 section.about {
     align-items: center;
     background: #232323;
     display: flex;
     flex-direction: column;
+    padding: 20px;
     text-align: center;
 }
 section.hero {
+    display: flex;
+    flex-direction: column;
     height: 400px;
+    justify-content: center;
     text-align: center;
-    /* not needed? */
-    /* width: 100%; */
 }
 h1.about {
     font-size: 32px;
 }
 h1.hero {
     font-size: 80px;
+    margin: 0;
 }
 p.about {
+    font-size: 18px;
+    line-height: 180%;
     margin: 16px 20px;
-    max-width: 600px;
+    max-width: 800px;
 }
 p.hero {
-    height: 200px;
+    font-size: 26px;
     margin: 0;
 }
 button#validate {
@@ -140,7 +146,7 @@ a:active {
     border-radius: 20px;
     border-style: dashed;
     border-width: 2px;
-    margin: 10px;
+    margin: 20px;
     padding: 10px 20px 20px 20px;
     width: 50%;
 }
