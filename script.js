@@ -205,6 +205,16 @@ function getID() {
     // Remove the "wrong" class from the button if there is one
     document.getElementById(this.id).classList.remove("wrong");
   }
+  // Check if every index in the userAnswer array correspond with the correctAnswer array
+  var allCorrect = userAnswer.every((answer, index) => Number(answer) == correctAnswer[index]);
+
+  // Tell the user that they're finished
+  if (allCorrect) {
+    console.log("Congratulations! All answers are correct!");
+    alert("Congratulations! All answers are correct!");
+  } else {
+    
+  }
 }
   
 // Create a function that will run every time the validate button is clicked
