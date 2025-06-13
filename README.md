@@ -17,7 +17,7 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 I wanted my website to kind of look like a personal website. I wanted it to have some information about the project and a page for the program I made in JavaScript.
 
-Since I already had some experience in HTML and CSS before I thought that part would be the easiest and that I would struggle with JavaScript but it was the other way around.
+Since I already had some experience in HTML and CSS before I thought that part would be the easiest and that I would struggle with JavaScript but it was the other way around. I was not feeling well mentally most of the time while working on the project so I'm sure I could've done even better if that wasn't the case. But I am still proud of everything that I managed to accomplish despite that.
 
 If I had more time I would've added images to the website. My plan was to add a digital sketch of the website to go alongside the "Planning Of The Project". I also wanted to add an image/screenshot of my Sudoku game next to or in the same card as "My Sudoku Game". I also would've focused more on accessibility. I really wanted to make a responsive design but found that it was way more difficult than I thought and chose to focus on other things instead.
 
