@@ -190,3 +190,14 @@ Sudoku:
 Website + Sudoku:
 - Added more text, embedded youtube video (html, css)
 - Fixed small mistakes in the code, cleaned up the code (html, css)
+
+**Thu 2025-06-12** 18:00 Worked for 3 hours 50 min with pauses
+
+Website:
+- Worked mainly on the contact page, did some minor changes to the other pages (html, css)
+
+**Fri 2025-06-13** 10:00 Worked for 1 hour
+
+Website:
+- Last additions and changes (html, css)
+- Validated the code
